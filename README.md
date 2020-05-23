@@ -27,10 +27,10 @@ A decentralized chat app.
 <p>Look and feel of the website on desktop and mobile: </p>
 <p align="center">
   <img src="https://github.com/lostmartian/securechat/blob/master/screenshots/desktop.png" height="400px" width="800px" caption="Desktop view">
-  Desktop view
+  <br>Desktop view
 </p>
 
 <p align="center">
   <img src="https://github.com/lostmartian/securechat/blob/master/screenshots/mobile.png" height="400px" width="250px" caption="Mobile view">
-  Mobile View
+  <br>Mobile View
 </p>
