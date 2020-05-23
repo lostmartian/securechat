@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Decentralized Chat</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+  <style>
+    body { background-image: url(./img/bg.png);}
+    pre { color: #fff; white-space: pre-wrap; word-wrap: break-word; text-shadow: 0 0 10px #ccc;  width:22rem;}
+    #input { border-bottom: 1px solid #ccc; background-color: rgb(22, 2, 22); padding: 1em; outline: 0;}
+    #input::before { content: ">";}
+  </style>
+  <script>
+    function log(message) {
+      document.getElementById("log").textContent += message + "\n";
+    }
+  </script>
+  <script src="./js/chain.js" type="application/javascript"></script>
+</head>
+<body>
+  <div class="container mt-5 shadow">
+    <div class="row shadow mt-5 p-5" style="background-color: rgb(22, 2, 22); opacity:0.8;">
+      <div class="col-sm-12 mt-3 text-center">
+        <h3 style="text-shadow:3px 1px 3px #000; color:#fff;" >SecureChat <i class="fa fa-earlybirds bg-white"></i></h3>
+        <p style="color:#fff;" class="d-none d-sm-block">SecureChat is a real-time decentralized chat room where users can anonymously chat with other users without the risk of their data getting hacked as the whole system is secured using blockchain technology.</p>
+        
+      </div>
+    </div>
+    
+    <div class="row mt-3 text-center">
+      <div class="col-sm-12 btn p-sm-4">
+        <h4 style="color:#fff;" class="text-center">Messages in this room: </h4>
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-2"></div>
+      <div class="col-sm-8 p-sm-5 text-center">
+        <div class="btn btn-dark mb-5 p-sm-5" id="log"></div>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+  </div>
+
+    <nav class="navbar navbar-light bg-light fixed-bottom" style=" opacity:0.9;">
+      <div class="container">
+      <a class="navbar-brand p-sm-3 d-none d-sm-block" href="#">
+        <h4>Enter message: </h4>
+      </a>
+      
+        <div class="navbar-nav mr-auto p-sm-2">
+          
+            <pre id="input" contenteditable="true" placeholder="Enter message"></pre>
+        </div>
+      </div>
+      
+    <!-- <div class="row text-center">
+      <div class="col-sm-3 btn">
+        Enter message: 
+      </div>
+      <div class="col-sm-9 btn">
+        <pre id="input" contenteditable="true" placeholder="Enter message"></pre>
+      </div>
+    </div> -->
+    </nav>
+
+  
+
+
+
+
+
+  
+  <!-- <pre id="input" contenteditable="true"></pre> -->
+</body>
+<!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+<script src="./js/jquery/dist/jquery.slim.min.js"></script>
+<script src="./js/popper.js/dist/umd/popper.min.js"></script>
+<script src="./css/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+
+  var b = Bugout("lostmartian");
+  b.on("others", function(address) { log(address + " [ others ]"); });
+  log(b.address() + " [ me ]");
+  
+  b.on("message", function(address, message) {
+    log(address + ": " + message);
+  });
+
+  document.getElementById("input").onkeydown = function(ev) {
+    if (ev.keyCode == 13) {
+      if (b.lastwirecount) {
+        b.send(ev.target.textContent);
+        ev.target.textContent = "";
+      }
+      ev.preventDefault();
+    }
+  }
+
+</script>
+</html>
