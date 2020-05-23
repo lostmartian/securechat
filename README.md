@@ -14,6 +14,8 @@ A decentralized chat app.
 </p>
 
 <p>
+  <img src="https://github.com/lostmartian/securechat/blob/master/screenshots/mobile.png" height="400px" width="250px">
+  <img src="https://github.com/lostmartian/securechat/blob/master/screenshots/desktop.png" height="400px" width="800px">
 </p>
 
 <p> To open this project follow the steps given below</p>
