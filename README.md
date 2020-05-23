@@ -1,5 +1,6 @@
 ### SecureChat
 A decentralized chat app.
+<hr>
 
 ![Diagram of how WebRTC works browser to browser](./webrtc-browser-to-browser.svg)
 
@@ -14,7 +15,7 @@ A decentralized chat app.
 </p>
 
 
-
+<hr>
 <p> To open this project follow the steps given below</p>
 
 <p>
@@ -24,6 +25,7 @@ A decentralized chat app.
 <li><kbd>npm start</kbd></li>
 </ol>
 </p>
+<hr>
 <p>Look and feel of the website on desktop and mobile: </p>
 <p align="center">
   <img src="https://github.com/lostmartian/securechat/blob/master/screenshots/desktop.png" height="400px" width="800px" caption="Desktop view">
