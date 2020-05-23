@@ -13,10 +13,7 @@ A decentralized chat app.
 <li>Client-server over WebRTC instead of HTTPS.</li>
 </p>
 
-<p>
-  <img src="https://github.com/lostmartian/securechat/blob/master/screenshots/mobile.png" height="400px" width="250px">
-  <img src="https://github.com/lostmartian/securechat/blob/master/screenshots/desktop.png" height="400px" width="800px">
-</p>
+
 
 <p> To open this project follow the steps given below</p>
 
@@ -26,4 +23,12 @@ A decentralized chat app.
 <li><kbd>npm install</kbd></li>
 <li><kbd>npm start</kbd></li>
 </ol>
+</p>
+
+<p align="center">
+  <img src="https://github.com/lostmartian/securechat/blob/master/screenshots/desktop.png" height="400px" width="800px" caption="Desktop view">
+</p>
+
+<p align="center">
+  <img src="https://github.com/lostmartian/securechat/blob/master/screenshots/mobile.png" height="400px" width="250px" caption="Mobile view">
 </p>
